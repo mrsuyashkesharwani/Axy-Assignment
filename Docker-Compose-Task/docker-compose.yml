@@ -12,18 +12,19 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./db-init:/docker-entrypoint-initdb.d
     networks:
       - private_net
     expose:
       - "5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
   backend:
-    build: ./backend
+    build: ./Backend
     container_name: backend-api
     env_file:
       - .env
@@ -47,11 +48,8 @@ services:
       retries: 3
 
   frontend:
-    build: ./frontend
+    build: ./Frontend
     container_name: frontend
-    depends_on:
-      backend:
-        condition: service_healthy
     ports:
       - "8080:80"
     networks:
