@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+</head>
+<body>
+  <h1>Frontend → Backend API</h1>
+  <button onclick="callAPI()">Call Backend</button>
+  <pre id="output"></pre>
+
+  <script>
+    function callAPI() {
+      fetch('/api/message')
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById('output').innerText =
+            JSON.stringify(data, null, 2);
+        })
+        .catch(err => console.error(err));
+    }
+  </script>
+</body>
+</html>
