@@ -151,7 +151,7 @@ Expected output:
 
 📸 **Example output:**
 
-![Docker containers running](Docker-Compose-Task/Images/cmd_s.png)
+![Docker containers running](Images/cmd_s.png)
 
 ---
 
@@ -184,7 +184,7 @@ Expected response:
 
 📸 **Example response:**
 
-![Frontend calling backend](Docker-Compose-Task/Images/frontend.png)
+![Frontend calling backend](Images/frontend.png)
 
 http://<EC2_PUBLIC_IP>:8080/api/message
 
@@ -215,7 +215,7 @@ Expected response:
 
 📸 **Database connectivity check:**
 
-![Database connected](Docker-Compose-Task/Images/database_check.png)
+![Database connected](Images/database_check.png)
 
 http://<EC2_PUBLIC_IP>:8080/api/health
 
