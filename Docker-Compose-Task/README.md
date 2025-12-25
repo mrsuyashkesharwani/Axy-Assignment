@@ -188,15 +188,7 @@ Expected response:
 
 http://<EC2_PUBLIC_IP>:8080/api/message
 
-````
 
-Expected response:
-
-```json
-{
-  "message": "Hello World from Backend API"
-}
-````
 
 ### 3️⃣ Health Check
 
@@ -204,14 +196,6 @@ Expected response:
 http://<EC2_PUBLIC_IP>:8080/api/health
 ```
 
-Expected response:
-
-```json
-{
-  "database": "connected",
-  "status": "UP"
-}
-```
 
 📸 **Database connectivity check:**
 
@@ -219,16 +203,6 @@ Expected response:
 
 http://<EC2_PUBLIC_IP>:8080/api/health
 
-````
-
-Expected response:
-
-```json
-{
-  "database": "connected",
-  "status": "UP"
-}
-````
 
 ---
 
@@ -272,19 +246,3 @@ docker compose down --volumes
 
 ---
 
-## Final Notes
-
-This project is designed to demonstrate:
-
-* Docker Compose networking
-* Service isolation
-* Reverse proxy setup
-* Health checks
-* Production‑grade debugging scenarios
-
-✅ Suitable for DevOps interviews
-✅ Reflects real‑world containerized architecture
-
----
-
-**Author**: Suyash

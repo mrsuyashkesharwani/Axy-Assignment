@@ -66,7 +66,7 @@ The infrastructure is provisioned using **Terraform with a modular structure**, 
 
 ## How to Deploy (Illustrative Commands)
 
-> These commands demonstrate the deployment flow. They are provided for documentation purposes and are not expected to be executed during evaluation.
+> These commands demonstrate the deployment flow. 
 
 ### Prerequisites
 - AWS account
@@ -133,15 +133,3 @@ After deployment, Terraform outputs the **Application Load Balancer DNS name**, 
 
 ---
 
-## Final Notes
-
-This infrastructure is designed to reflect **real-world production standards**, not a local or demo setup.  
-It emphasizes:
-
-- Security
-- High availability
-- Clear separation of responsibilities
-- AWS-native managed services
-- Maintainable and scalable design
-
-The design maps a local Docker Compose architecture to **AWS best practices**, making it suitable for production workloads and professional DevOps environments.
